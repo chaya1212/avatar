@@ -1,0 +1,56 @@
+<svg width="71.722" height="103" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path id="a" d="M0 103h71.722V0H0z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#6189AC" d="M2.219 98.517h36.31V34.543H2.219z"/>
+        <path fill="#5A72A2" d="M20.375 98.222H38.53V34.543H20.375z"/>
+        <path fill="#F8F3E0" d="M0 103h40.749v-4.483H0z"/>
+        <path fill="#E0DCCB" d="M20.374 103h20.374v-4.483H20.374z"/>
+        <path fill="#F8F3E0" d="M0 34.543h40.749V30.06H0z"/>
+        <path fill="#E0DCCB" d="M20.375 34.543h20.374V30.06H20.375zM16.328 9.716h4.047V30.06H2.219z"/>
+        <path fill="#C2BCA6" d="M24.421 9.716h-4.047V30.06h18.155z"/>
+        <path fill="#6189AC" d="M13.821 9.716h12.537V0H13.821z"/>
+        <path fill="#5A72A2" d="M20.374 9.716h5.983V0h-5.983z"/>
+        <path d="M21.76 4.858a1.672 1.672 0 1 1-3.343 0 1.672 1.672 0 0 1 3.344 0" fill="#464233"/>
+        <path d="M21.264 4.858a1.175 1.175 0 1 1-2.35 0 1.175 1.175 0 0 1 2.35 0" fill="#5E5945"/>
+        <mask id="b" fill="#fff">
+            <use xlink:href="#a"/>
+        </mask>
+        <path fill="#F8F3E0" mask="url(#b)" d="M9.374 86.067h11.001V43.564H9.374z"/>
+        <path fill="#E0DCCB" mask="url(#b)" d="M20.374 86.067h11.001V43.564H20.374z"/>
+        <path fill="#E16A56" mask="url(#b)" d="M11.296 54.534h18.156v-5.955H11.296z"/>
+        <path fill="#CF5A46" mask="url(#b)" d="M20.375 54.534h9.077v-5.955h-9.077z"/>
+        <path fill="#545245" mask="url(#b)" d="M11.296 63.988h18.156v-2.612H11.296z"/>
+        <path fill="#423E32" mask="url(#b)" d="M20.375 63.988h9.077v-2.612h-9.077z"/>
+        <path fill="#545245" mask="url(#b)" d="M11.296 68.062h18.156V65.45H11.296z"/>
+        <path fill="#423E32" mask="url(#b)" d="M20.375 68.062h9.077V65.45h-9.077z"/>
+        <path fill="#545245" mask="url(#b)" d="M11.296 72.137h18.156v-2.612H11.296z"/>
+        <path fill="#423E32" mask="url(#b)" d="M20.375 72.137h9.077v-2.612h-9.077z"/>
+        <path fill="#545245" mask="url(#b)" d="M11.296 76.211h18.156v-2.612H11.296z"/>
+        <path fill="#423E32" mask="url(#b)" d="M20.375 76.211h9.077v-2.612h-9.077z"/>
+        <path fill="#545245" mask="url(#b)" d="M11.296 80.285h18.156v-2.611H11.296z"/>
+        <path fill="#423E32" mask="url(#b)" d="M20.375 80.285h9.077v-2.611h-9.077z"/>
+        <path fill="#F7BB36" mask="url(#b)" d="M33.193 98.517h36.311V34.543H33.193z"/>
+        <path fill="#F0902A" mask="url(#b)" d="M51.348 98.222h18.156V34.543H51.348z"/>
+        <path fill="#F8F3E0" mask="url(#b)" d="M30.974 103h40.749v-4.483H30.974z"/>
+        <path fill="#E0DCCB" mask="url(#b)" d="M51.348 103h20.375v-4.483H51.348z"/>
+        <path fill="#F8F3E0" mask="url(#b)" d="M30.974 34.543h40.749V30.06H30.974z"/>
+        <path fill="#E0DCCB" mask="url(#b)" d="M51.348 34.543h20.375V30.06H51.348zM47.302 9.716h4.047V30.06H33.193z"/>
+        <path fill="#C2BCA6" mask="url(#b)" d="M55.395 9.716h-4.047V30.06h18.155z"/>
+        <path fill="#F7BB36" mask="url(#b)" d="M44.795 9.716h12.536V0H44.795z"/>
+        <path fill="#F0902A" mask="url(#b)" d="M51.348 9.716h5.983V0h-5.983z"/>
+        <path d="M52.735 4.858a1.672 1.672 0 1 1-3.344 0 1.672 1.672 0 0 1 3.344 0" fill="#464233" mask="url(#b)"/>
+        <path d="M52.238 4.858a1.175 1.175 0 1 1-2.35 0 1.175 1.175 0 0 1 2.35 0" fill="#5E5945" mask="url(#b)"/>
+        <path fill="#F8F3E0" mask="url(#b)" d="M40.348 86.067h11V43.564h-11z"/>
+        <path fill="#E0DCCB" mask="url(#b)" d="M51.348 86.067h11.001V43.564H51.348z"/>
+        <path fill="#6189AC" mask="url(#b)" d="M42.271 54.534h18.155v-5.955H42.271z"/>
+        <path fill="#5A72A2" mask="url(#b)" d="M51.348 54.534h9.078v-5.955h-9.078z"/>
+        <path fill="#545245" mask="url(#b)" d="M42.271 63.988h18.155v-2.612H42.271z"/>
+        <path fill="#423E32" mask="url(#b)" d="M51.348 63.988h9.078v-2.612h-9.078z"/>
+        <path fill="#545245" mask="url(#b)" d="M42.271 68.062h18.155V65.45H42.271z"/>
+        <path fill="#423E32" mask="url(#b)" d="M51.348 68.062h9.078V65.45h-9.078z"/>
+        <path fill="#545245" mask="url(#b)" d="M42.271 72.137h18.155v-2.612H42.271z"/>
+        <path fill="#423E32" mask="url(#b)" d="M51.348 72.137h9.078v-2.612h-9.078z"/>
+    </g>
+</svg>
