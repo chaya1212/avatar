@@ -1,0 +1,456 @@
+.wrap_choose {
+  position: relative;
+  @include size(100%);
+  min-height: 50vh;
+}
+
+.avatar_content {
+  transform: scale(80%) translate(12%, 11%);
+}
+
+.choose_img {
+  width: 5rem;
+}
+
+.wrap_choose {
+  position: relative;
+  padding: 2rem 0;
+
+  .choose_container {
+    width: 80%;
+    max-width: 60rem;
+    margin: auto;
+  }
+
+  &:after {
+    @include insert-content($left: 0, $top: 0);
+    @include size(100%, 100%);
+    min-height: 400px;
+    background: rgba(#FFE7CB, .6);
+    z-index: -1;
+  }
+}
+
+.choose_block {
+  position: relative;
+  height: 15rem;
+  border-radius: 1rem;
+  background: $light;
+
+  .nav-tabs {
+    position: relative;
+    --bs-nav-tabs-border-color: none;
+    --bs-nav-tabs-link-active-border-color: transparent;
+    --bs-nav-tabs-link-active-bg: transparent;
+
+  }
+
+  .nav_item {
+    position: relative;
+    display: inline-block;
+
+    &.is_active {
+      .nav-link {
+        .btn_text {
+          position: relative;
+          z-index: 1;
+          filter: invert(67%) sepia(29%) saturate(981%) hue-rotate(49deg) brightness(100%) contrast(89%);
+        }
+
+        &:after {
+          @include insert-content(0, 0);
+          @include size(100%);
+          background: url("~@/assets/images/btn/choose_item/active/btn_active.svg") center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          z-index: 0;
+        }
+      }
+    }
+  }
+
+  .nav-link {
+    border: none;
+
+    .btn_text {
+      transition: filter .2s, transform .5s;
+
+      &:hover {
+        border: none;
+        transform: scale(1.05);
+        filter: invert(67%) sepia(29%) saturate(981%) hue-rotate(49deg) brightness(100%) contrast(89%);
+      }
+    }
+  }
+
+  .scroll_nav {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: calc(100% - 4.4rem);
+    margin: 0 2.2rem;
+    padding: 0.5rem 0 1rem;
+    white-space: nowrap;
+    overflow-x: scroll;
+
+    &.withoutPrevBtn {
+      width: calc(100% - 2.2rem);
+      margin-left: 0;
+    }
+  }
+
+  .scroll::-webkit-scrollbar {
+    width: 0;
+  }
+
+  .btn_choose {
+    min-width: 134px;
+    min-height: 48px;
+    color: $black;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+  }
+}
+
+.wrap_list {
+  @include flexbox($justify: flex-start);
+  width: calc(100% - 8rem);
+  overflow-x: auto;
+}
+
+.choose_item {
+  position: relative;
+  margin: .1rem;
+
+  &:not(.color_item) {
+    min-width: 5.5rem;
+    overflow: hidden;
+
+    .chooseItem_radioBtn {
+      + div {
+        margin: .25rem;
+      }
+    }
+  }
+
+  .chooseItem_radioBtn {
+    display: none;
+
+    + div {
+      position: relative;
+    }
+
+    &:checked {
+      + div {
+        border: 2px solid $yellow;
+        box-shadow: 0 0 2px 2px $yellow;
+      }
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    .chooseItem_radioBtn + div {
+      border: 2px solid $green;
+      box-shadow: 0 0 2px 2px $yellow;
+    }
+  }
+
+  &:not(.color_item) {
+    .chooseItem_radioBtn {
+      + div {
+        border: solid 2px $green;
+        @include size(5rem);
+        border-radius: 8px;
+        background: #fcf4f2;
+        overflow: hidden;
+      }
+
+      &:checked {
+        + div {
+          border: 2px solid $yellow;
+        }
+      }
+    }
+
+    &.new_chooseItem {
+      .chooseItem_radioBtn {
+        + div {
+          border-top-left-radius: 4px;
+        }
+      }
+    }
+
+    .img_item {
+      @include position(50%, 50%);
+      @include size(5rem);
+      max-height: 100%;
+      transform: translate(50%, -50%);
+    }
+  }
+}
+
+.is_new {
+  &:after {
+    @include insert-content(.5rem, $right: 1.75rem);
+    @include size(8px);
+    border-radius: 50%;
+    background: $color_newPioint;
+    opacity: .5;
+    animation: opacity 1.5s infinite;
+  }
+}
+
+@keyframes opacity {
+  0%, 100% {
+    opacity: .5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.badges_new {
+  @include position($left: 1px, $top: -.5px);
+  padding: 2px 10px 0 4px;
+  border-radius: 4px 0 0 0;
+  background-color: $color_newPioint;
+  transform: translate(8%, 0%) scale(.9);
+  transform-origin: left bottom;
+  z-index: 1;
+  --bgMask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='14' viewBox='0 0 36 14'%3E%3Cdefs/%3E%3Cpath id='Rectangle' fill='%23D8D8D8' d='M.5 0h27.095a4 4 0 013.703 2.487L36 14H0V.5A.5.5 0 01.5 0z'/%3E%3C/svg%3E");
+  -webkit-mask-image: var(--bgMask);
+  mask-image: var(--bgMask);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+}
+
+.img_item {
+  #gender & {
+    transform: translate(50%, -50%) scale(.75);
+  }
+
+  #eyes & {
+    transform: translate(50%, -55%) scale(2);
+  }
+
+  #eyebrows & {
+    transform: translate(50%, -50%) scale(1.5);
+  }
+
+  #nose & {
+    transform: translate(50%, -75%) scale(3);
+  }
+
+  #nose input[name="nose_12"] + div & {
+    transform: translate(70%, -60%) scale(1.75);
+  }
+
+  #nose input[name="nose_10"] + div & {
+    transform: translate(40%, -75%) scale(3);
+  }
+
+  #nose input[name="nose_11"] + div & {
+    transform: translate(50%, -60%) scale(1.25);
+  }
+
+  #blush & {
+    transform: translate(50%, -75%) scale(1.75);
+  }
+
+  #blush input[name="blush_6"] + div & {
+    transform: translate(50%, -55%) scale(1);
+  }
+
+  #mouth & {
+    transform: translate(50%, -110%) scale(3);
+  }
+
+  #mouth input[name="mouth_3"] + div &,
+  #mouth input[name="mouth_9"] + div &, {
+    transform: translate(50%, -75%) scale(2);
+  }
+
+  #mouth input[name="mouth_11"] + div &, {
+    transform: translate(50%, -70%) scale(1.5);
+  }
+
+  #mouth input[name="mouth_12"] + div &, {
+    transform: translate(50%, -70%) scale(1.5);
+  }
+
+  #nose input[name="nose_3"] + div & {
+    transform: translate(80%, -75%) scale(2.75);
+    z-index: 9;
+  }
+
+  #accessories input[name='component_0'] + div &,
+  #accessories input[name='component_11'] + div & {
+    transform: translate(50%, -50%) scale(1);
+  }
+
+  #accessories input[name='component_8'] + div &,
+  #accessories input[name='component_9'] + div & {
+    transform: translate(50%, -20%) scale(1.5);
+  }
+
+  #accessories input[name='component_7'] + div & {
+    transform: translate(25%, -20%) scale(1.5);
+  }
+}
+
+.color_list {
+  min-height: 40px;
+}
+
+.color_item {
+  @include size(2rem);
+  margin: .25rem .5rem;
+  padding: 0;
+  border-radius: 50%;
+  overflow: hidden;
+
+  .chooseItem_radioBtn {
+    + div {
+      border: solid 2px rgba($green, .4);
+    }
+  }
+}
+
+.color_picker, .color_view {
+  @include size(2rem);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.btn_picker {
+  @include size(2rem);
+  transform: translate(0%, 10%);
+}
+
+.color_picker {
+  @include size(0rem);
+  margin: -.15rem -.15rem;
+  padding: 0;
+  border: 0;
+  opacity: 0;
+
+  &::-moz-color-swatch, &::-webkit-color-swatch-wrapper, &::-webkit-color-swatch {
+    border: 0px none;
+  }
+}
+
+//prev&next
+.prev, .next {
+  @include position(.5rem);
+  display: flex;
+  max-width: 32px;
+  height: 56px;
+  border: none;
+  background-color: $green;
+  z-index: 1;
+
+  &:hover {
+    background-color: $yellow;
+
+    &:before {
+      color: $darkolivegreen;
+    }
+  }
+
+  &:active {
+    background-color: #c39e00;
+
+    &:before {
+      color: white;
+    }
+  }
+
+  &.hide {
+    display: none;
+  }
+}
+
+.prev {
+  left: .5rem;
+  border-radius: .8rem 0 0 .8rem;
+
+  &:before {
+    content: '◀';
+    color: $darkolivegreen;
+    transform: translate(0px, 1rem);
+  }
+}
+
+.next {
+  right: .5rem;
+  border-radius: 0 .8rem .8rem 0;
+
+  &:before {
+    content: '►';
+    color: $darkolivegreen;
+    transform: translate(0px, 1rem);
+  }
+}
+
+//matrix
+.matrix_wrap{
+  @include size(8rem);
+  position: absolute;
+  bottom: 1rem;
+  right: 0;
+
+  .vertical_item,.horizontal_item{
+    position: relative;
+  }
+
+  .vertical_item{
+    height: 100%;
+    @include flexbox($direction:column,$justify:space-around);
+  }
+
+  .horizontal_item{
+    width: 100%;
+    @include flexbox($justify:space-around);
+    transform: translateY(-50%);
+    @include position($top:50%);
+  }
+
+  .btn_matrix{
+    @include size(2.5rem);
+    border-radius: 5rem;
+    background: #82AA60;
+    border: none;
+
+    &:hover{
+      background: #EBC41D;
+    }
+
+    &:active{
+      background-color: #c39e00;
+    };
+
+    &.matrix_disabled{
+      background: #d3d7d0;
+    }
+  }
+
+  .line{
+    @include position($top:2.5rem);
+    margin: -2.5rem -.7rem;
+  }
+}
+
+.badge_view{
+  @include position();
+  @include size(297mm,210mm);
+  background-color: white;
+  z-index: -999;
+
+  .badge_item{
+    position: absolute;
+    padding: 8rem;
+    @include size(100%);
+  }
+}

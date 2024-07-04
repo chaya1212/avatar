@@ -1,0 +1,25 @@
+.wrap_easel {
+  position: relative;
+  padding-top: 50px;
+  z-index: 0;
+}
+
+.bg_easel {
+  @include position($position: absolute, $top: 0, $left: 50%);
+  width: 125%;
+  transform: translateX(-50%);
+  z-index: -1;
+  filter: drop-shadow(6px 6px 0px #4C3D2C);
+
+  .bg_img {
+    width: 100%;
+  }
+}
+
+.avatar_svg {
+  @include size(100%);
+}
+
+.avatar_content {
+  transform: scale(85%) translate(8%, 9%);
+}

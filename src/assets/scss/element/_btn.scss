@@ -1,0 +1,87 @@
+.btn {
+  transition: .2s;
+  --bs-btn-active-color: darken($green, 10%);
+  border: 0;
+  * {
+    transition: .2s;
+  }
+
+  &:hover {
+    transition: ease-in 100ms;
+    transform: scale(1.05);
+  }
+
+  &:active {
+    border: none;
+  }
+
+  &.btn_primary {
+    position: relative;
+    height: 3rem;
+    margin: 3rem 0 0 0;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    background: $green;
+    box-shadow: 0 1px 3px $darkolivegreen;
+    margin: 0 3rem;
+
+    .icon {
+      @include size(3rem, auto);
+      @include position($right: calc(100% - 1rem), $bottom: -5px);
+
+    }
+    .text {
+      @include size(auto, 100%);
+    }
+
+    &:hover {
+      transition: ease-in 100ms;
+      transform: scale(1.02);
+
+      .text {
+        transform: scale(1.1);
+      }
+
+      .icon {
+        transform: scale(1.1) translate(-2px, 0%);
+      }
+    }
+
+    &:active {
+      background-color: $yellow;
+      transition: ease-in 0ms;
+    }
+  }
+
+  &.btn_reset {
+    width: 10rem;
+    max-width: 130px;
+    transition: ease-in 100ms;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+
+  &.btn_random {
+    border-radius: 50%;
+    background-color: $green;
+    @include size(3rem);
+    @include position(1rem, -1.5rem);
+    box-shadow: 0 0 0.5rem -3px darken($green, 10%);
+
+    &:hover, &:active {
+      background-color: lighten($green, 10%);
+    }
+
+    &.is_new:after {
+      top: 0.25rem;
+      right: 0;
+    }
+  }
+}
+
+
+
+

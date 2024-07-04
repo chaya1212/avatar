@@ -1,0 +1,26 @@
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin position($top: null, $right: null, $bottom: null, $left: null, $position:absolute) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+// before & after
+@mixin insert-content($top: null, $left: null, $bottom: null, $right: null) {
+  content: '';
+  @include position($top, $right, $bottom, $left);
+}
+
+@mixin flexbox($justify:center, $align:center, $display:flex, $wrap:nowrap, $direction:row) {
+  display: $display;
+  flex-wrap: $wrap;
+  flex-direction: $direction;
+  justify-content: $justify; // X
+  align-items: $align; // Y
+}

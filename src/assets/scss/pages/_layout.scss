@@ -1,0 +1,56 @@
+.wrap_header {
+  height: 100px;
+
+  .header_logo {
+    width: 20%;
+    max-width: 230px;
+    padding: 1rem 0 2rem 0;
+  }
+}
+
+.avatar_container {
+  position: relative;
+  min-width: 1200px;
+  height: 100vh;
+  min-height: 800px;
+  background: $bg_orange;
+  background-image: url("~@/assets/images/home/bg_grid.png"), url("~@/assets/images/home/bg_fullTool.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  overflow-x: auto;
+}
+
+.creat_container {
+  @include flexbox($direction: column, $justify: flex-start);
+  @include size(100%, calc(100vh - 100px));
+  min-height: calc(100vh - 100px);
+  background-size: contain;
+  z-index: -1;
+  filter: drop-shadow(0px 0px 5px rgba(#988B7B, .5));
+
+  .value_item {
+    position: relative;
+    padding: 2rem;
+    border-radius: .5rem;
+    background: $light;
+    z-index: 10;
+
+    .avatar_round {
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    .icon_dice {
+      @include position($top: 50%, $left: 50%);
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .face_item {
+    @include position($right: 0);
+    @include size(auto);
+    max-width: 100%;
+    max-height: 100%;
+  }
+}

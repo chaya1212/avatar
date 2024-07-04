@@ -1,0 +1,131 @@
+.wrap_view {
+  @include flexbox($justify: center, $direction: column);
+  min-height: calc(100vh - 100px);
+  background-image: url("~@/assets/images/home/bg_photo.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  .avatar_value {
+    position: relative;
+  }
+
+  .value_item {
+    @include position($left: 50%);
+    width: 25rem;
+    max-width: 292px;
+    border-radius: .5rem;
+    transform: translate(-51%, 13.5%);
+  }
+
+  .view_border {
+    width: 30rem;
+    max-width: 400px;
+  }
+}
+
+.icon_lg {
+  @include size(3rem);
+}
+
+.tooltip_item {
+  background-color: #FFD5A5;
+  @include position($left: 50%, $top: -1.7rem);
+  transform: translateX(-50%);
+  z-index: 4;
+  color: #C23E27;
+  @include size(60%, 1.5rem);
+  border-radius: 5rem;
+
+  &.is_new{
+    &:after{
+      top:0;
+      right: 0;
+    }
+  }
+
+
+  &:before {
+    transform: translateX(-50%);
+    @include insert-content($left: 50%, $top: 100%);
+    @include size(.5rem);
+    border: 7px solid;
+    border-color: #FFD5A5 transparent transparent transparent;
+  }
+}
+
+.modal_wrap {
+  .header_pigment {
+    position: absolute;
+  }
+
+  .modal-dialog {
+    top: 13vh;
+  }
+
+  .modal-content {
+    height: 16rem;
+    border: transparent;
+    color: $darkolivegreen;
+    background-color: $bg_orange;
+    background-size: cover;
+  }
+
+  .modal-header {
+    justify-content: center;
+    border-bottom: transparent;
+    color: $light;
+    background-color: $green;
+
+    .header_pigment {
+      top: -15%;
+      left: 0;
+    }
+  }
+
+  .modal-footer {
+    justify-content: center;
+    border-top: transparent;
+
+    .header_pigment {
+      right: 0;
+    }
+  }
+}
+
+.modal_card {
+  .modal-content {
+    height: 24rem;
+  }
+
+  .form-control {
+    &:focus {
+      border-color: $darkolivegreen;
+      box-shadow: 0 0 0 0.25rem rgba($darkolivegreen, .25);
+    }
+  }
+
+  .btn_primary {
+    height: 2rem;
+    padding-top: .3rem;
+  }
+}
+
+.icon_download{
+  width: 10rem;
+}
+
+.modal_createBadge{
+  .choose_item{
+    .icon_lg{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .modal_tips{
+    color: #CF5A46;
+    @include position($top:75%,$left:50%);
+  }
+}

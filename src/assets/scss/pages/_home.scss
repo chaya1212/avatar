@@ -1,0 +1,119 @@
+.wrapper {
+  overflow: hidden;
+}
+
+.wrap_header, .avatar_creat {
+  width: 100%;
+}
+
+.home_container {
+  height: 100vh;
+  transition: ease-in 100ms;
+
+  &:before {
+    @include insert-content($left: 0);
+    @include size(100%, 100vh);
+    background-image: url("~@/assets/images/home/top_color.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation: bg_opacity 1s ease-in-out;
+    z-index: 10;
+  }
+
+  &:after {
+    @include insert-content($left: 0, $bottom: 0);
+    @include size(100%, 100vh);
+    background-image: url("~@/assets/images/home/bottom_color.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+    animation: bg_opacity 1s ease-in-out;
+    z-index: 10;
+  }
+
+  .banner_avatar {
+    position: absolute;
+    width: 18vw;
+    min-width: 200px;
+  }
+
+  .avatar_img {
+    top: 0;
+    opacity: 0;
+    animation: bg_opacity 1s ease-in forwards;
+  }
+
+  .avatar_LT {
+    left: 4%;
+    animation-delay: 2s;
+  }
+
+  .avatar_RT {
+    right: 15%;
+    animation-delay: 3s;
+  }
+
+  .bottom_avatar {
+    .avatar_img {
+      top: auto;
+    }
+  }
+
+  .avatar_LB {
+    bottom: 3%;
+    left: 6%;
+    animation-delay: 3.5s;
+  }
+
+  .avatar_RB {
+    right: 10%;
+    bottom: 6%;
+    animation: bg_opacity 2s ease-in forwards;
+    animation-delay: 1s;
+  }
+
+  .inner_item {
+    position: relative;
+    transform: translateY(30vh);
+    z-index: 50;
+
+    .site_title {
+      width: 25%;
+      padding-top: 2rem;
+    }
+
+    .btn_primary {
+      margin: 3rem 0 0 0;
+      box-shadow: 0 1px 13px rgba($darkolivegreen, .5), inset 2px 2px 0px #cce3b9, inset -2px -4px 0px #738565;
+      transition: .2s;
+
+      &:hover {
+        background: $darkolivegreen;
+        box-shadow: 0 1px 13px rgba($darkolivegreen, .5), inset 2px 2px 0px #94a984, inset -2px -4px 0px #1f3011;
+        transition: ease-in 100ms;
+        transform: scale(1.05);
+
+        .icon_pen {
+          transform: translate(-25%, -60%);
+        }
+      }
+
+      &:active {
+        background: $yellow;
+        box-shadow: 0 1px 13px rgba(#463a2c, .5), inset 2px 2px 0px #ffe471, inset -2px -4px 0px #a58709;
+        transition: ease-in 0ms;
+
+        .icon_pen {
+          transform: translate(-14%, -52%);
+        }
+      }
+    }
+
+    .icon_pen {
+      height: 10vh;
+      animation: avatar_rotate 2s alternate infinite ease-in-out;
+      filter: drop-shadow(0 0 1px $darkolivegreen);
+    }
+  }
+}
+
